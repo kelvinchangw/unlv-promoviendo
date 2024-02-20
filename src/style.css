@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background: black;
+    color: wheat;
+
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    flex-direction: column;
+}
+
+header {
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 1400px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Shared Styles */
+.container {
+    display: flex;
+}
+
+.nav-links {
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-size: 1.6rem;
+}
+
+/* Specific Styles */
+.name-brand > .nav-link {
+    gap: 1rem;
+    align-items: center;
+}
+
+.project-title {
+    font-size: 2.6rem;
+}
+
+.project-logo {
+    height: 2.6rem;
+}
