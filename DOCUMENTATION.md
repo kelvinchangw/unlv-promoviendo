@@ -1,8 +1,9 @@
 # Color Schemes
-- Green #006847 mexico
+- Green #006847 mexico, #009B3A brazil
 - Blue #0047AB salvador!, #003087 colombia
 - Yellow #FFCD00 colombia
 - Red #B10202 unlv
+- Gray #666666 unlv
 
 # Inspiration
 

@@ -3,10 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 
-    background: black;
-    color: wheat;
+    color: black;
 
     font-family: "Manrope", sans-serif;
+}
+
+html {
+    background-color: black;
 }
 
 body {
@@ -18,7 +21,6 @@ header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    width: 1400px;
     margin: auto;
     left: 0;
     right: 0;
@@ -26,6 +28,95 @@ header {
 
 a {
     text-decoration: none;
+}
+
+section {
+    display: flex;
+    /* height: 100vh; */
+    /* margin-top: 14rem; */
+}
+
+.intro-section,
+.about-section {
+    height: 100vh;
+}
+
+.navbar-brand,
+.name-brand {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+main.container {
+    flex-direction: column;
+    gap: 2rem;
+}
+.test-title {
+    height: 6rem;
+    font-size: 6rem;
+}
+
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #666666;
+    gap: 2rem;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+.about-section-information {
+    width: 38vw;
+}
+.about-section-information-text {
+    display: block;
+    font-size: 4rem;
+    color: wheat;
+}
+
+.scroll-reminder {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: #FFCD00;
+    /* background-color: #666666; */
+}
+
+.funding-section {
+    background-color: orange;
+    width: 100%;
+    padding-bottom: 60vh;
+    padding: 10rem 2rem 50rem 2rem;
+}
+
+.funding-section-text {
+    color: black;
+    font-size: 4vw;
+    width: 100%;
+    display: block;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.funding-section-subtext {
+    color: black;
+    font-size: 3vw;
+    display: block;
+    margin-bottom: 50rem;
+}
+
+.funding-section-tiles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.funding-img {
+    height: 10rem;
 }
 
 /* Shared Styles */
@@ -52,5 +143,5 @@ a {
 }
 
 .project-logo {
-    height: 2.6rem;
+    height: 50rem;
 }
