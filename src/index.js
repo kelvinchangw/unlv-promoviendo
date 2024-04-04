@@ -30,21 +30,21 @@ import SplitType from "split-type";
 //     }
 // );
 
-const nameBrand = SplitType.create(".project-title");
-const nameBrandChars = nameBrand.chars;
+// const nameBrand = SplitType.create(".project-title");
+// const nameBrandChars = nameBrand.chars;
 
-gsap.fromTo(
-    nameBrandChars,
-    {
-        y: -50,
-    },
-    {
-        y: 0,
-        opacity: 1,
-        duration: 2,
-        ease: "power4.out",
-    }
-);
+// gsap.fromTo(
+//     nameBrandChars,
+//     {
+//         y: -50,
+//     },
+//     {
+//         y: 0,
+//         opacity: 1,
+//         duration: 2,
+//         ease: "power4.out",
+//     }
+// );
 
 const aboutLink = SplitType.create(".nav-link");
 const aboutLinkChars = aboutLink.chars;
