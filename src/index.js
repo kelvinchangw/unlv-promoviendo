@@ -10,31 +10,12 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 import SplitType from "split-type";
 
-// const fundingSectionText = SplitType.create(".funding-section-text");
-// const chars = fundingSectionText.chars;
+
+// const aboutLink = SplitType.create(".nav-link");
+// const aboutLinkChars = aboutLink.chars;
 
 // gsap.fromTo(
-//     chars,
-//     { y: -100, opacity: 0 },
-//     {
-//         y: 0,
-//         opacity: 1,
-//         // ease: "power4.out",
-//         scrollTrigger: {
-//             trigger: ".funding-section-text", // Use the class name directly if SplitType doesn't provide a reference to the DOM element
-//             start: "top bottom-=400",
-//             end: "+=600", // Adjust as needed for when the animation should end
-//             scrub: true, // Optional: smooths the animation in relation to the scrolling
-//             markers: true, // Uncomment for debugging the start and end points
-//         },
-//     }
-// );
-
-// const nameBrand = SplitType.create(".project-title");
-// const nameBrandChars = nameBrand.chars;
-
-// gsap.fromTo(
-//     nameBrandChars,
+//     aboutLinkChars,
 //     {
 //         y: -50,
 //     },
@@ -46,31 +27,57 @@ import SplitType from "split-type";
 //     }
 // );
 
-const aboutLink = SplitType.create(".nav-link");
-const aboutLinkChars = aboutLink.chars;
+// Intro Section Animation
+let introTimeline = gsap.timeline();
 
-gsap.fromTo(
-    aboutLinkChars,
+const projectLogo = document.querySelector(".project-logo");
+
+introTimeline.fromTo(
+    projectLogo,
     {
-        y: -50,
+        opacity: 0,
     },
     {
-        y: 0,
         opacity: 1,
-        duration: 2,
-        ease: "power4.out",
+        duration: 0.8,
+        ease: "power1.inOut",
     }
 );
 
-const introSectionText = document.querySelector(
-    ".intro-section-information-text"
+const promoviendoTitle = document.querySelector(".promoviendo-title");
+
+introTimeline.fromTo(
+    promoviendoTitle,
+    {
+        text: "",
+        opacity: 0,
+        width: "0rem",
+    },
+    {
+        text: "Promoviendo",
+        opacity: 1,
+        duration: 0.4,
+        width: "66rem",
+        ease: "power1.inOut",
+    },
+    ">",
 );
 
-// gsap.to(introSectionText, {
-//     duration: 3,
-//     text: "Promoviendo La Esperanza Equitativa/Advancing Equitable Teaching Practices to Reduce Systemic Inequities in Computer Science Courses for Latinx Students",
-//     ease: "none",
-// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const scrollReminder = document.querySelector(".scroll-reminder", {
     types: "chars",
