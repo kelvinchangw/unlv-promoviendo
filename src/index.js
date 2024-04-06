@@ -1,5 +1,6 @@
 // IMPORTS
 import "./style.css";
+
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 
