@@ -1,3 +1,5 @@
+@import url("./assets/fonts/roboto/stylesheet.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +7,7 @@
 
     color: black;
 
-    /* font-family: "Manrope", sans-serif; */
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
 
     -webkit-text-size-adjust: none;
 }
@@ -36,9 +37,9 @@ header {
     width: 100%;
 
     /* TEST */
-    opacity: 0%;
+    /* opacity: 0%; */
 
-    background-color: black;
+    background-color: gray;
 }
 
 .header-content {
@@ -58,6 +59,7 @@ a {
 
 section {
     display: flex;
+    padding: 2rem;
     /* height: 100vh; */
     /* margin-top: 14rem; */
 }
@@ -119,7 +121,6 @@ main.container {
     width: 100%;
     /* padding-bottom: 60vh; */
     /* padding: 10rem 2rem 50rem 2rem; */
-    padding: 2rem;
 }
 
 .funding-section-text {
@@ -178,39 +179,46 @@ main.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
 }
 .team-section-title {
-    margin: 12rem 0 6rem 0;
+    margin: 0 0 6rem 0;
     font-size: 4rem;
     text-align: center;
 }
 
-.team-card-container {
-    /* background-color: coral; */
+.team-cards-container {
     display: flex;
     flex-direction: row;
-    max-width: calc(1200px + (3 * 2rem));
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;
+}
+.team-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 2rem;
+}
+.team-member-photo {
+    object-fit: cover;
+    height: 100%;
+    width: auto;
 }
 .team-card {
     width: 300px;
-    height: 360px;
-    background-color: aqua;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    gap: 1rem;
+    transition: ease-out all .2s;
 }
-.team-member-info {
+.team-card:hover {
+    background-color: gray;
+}
+.team-member-titles {
     width: 100%;
-    height: 80px;
-    background-color: whitesmoke;
+    /* height: 80px; */
+    gap: 0.6rem;
     opacity: 0.95;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -223,14 +231,21 @@ main.container {
     font-size: 0.9rem;
     font-weight: 400;
 }
+.team-member-info {
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    padding: 1rem;
+}
+.social-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+}
 
-.team-card {
-    background-size: contain;
-}
-#taghva {
+/* #taghva {
     background-image: url("./assets/imgs/team-photos/taghva.jpg ");
-}
-#fonseca {
+} */
+/* #fonseca {
     background-image: url("./assets/imgs/team-photos/fonseca.jpg");
 }
 #goins {
@@ -247,7 +262,7 @@ main.container {
 }
 #chang {
     background-image: url("./assets/imgs/team-photos/chang.PNG");
-}
+} */
 
 footer {
     width: 100%;
@@ -276,7 +291,7 @@ footer {
     height: 100%;
 }
 .type-logo polygon {
-    fill: red;
+    fill: wheat;
 }
 
 ::-webkit-scrollbar {
@@ -294,7 +309,8 @@ footer {
 
 /* DEV SECTION */
 a {
-    color: blue;
+    color: wheat;
+    /* color: blue; */
 }
 
 .footer-content {
@@ -345,13 +361,11 @@ a {
 }
 
 .promoviendo-title {
-    /* width: 66rem; */
     color: wheat;
     font-size: 10rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
-/* .funding-img {
-    width: 4rem;
-    height: 100%;
-} */
+.linkedin-icon path {
+
+}

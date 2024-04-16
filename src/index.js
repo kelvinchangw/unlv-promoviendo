@@ -58,13 +58,26 @@ introTimeline.fromTo(
         text: "Promoviendo",
         opacity: 1,
         duration: 0.4,
-        width: "66rem",
+        width: "60rem",
         ease: "power1.inOut",
     },
     ">",
 );
 
+const headerContent = document.querySelector(".header-content");
 
+introTimeline.fromTo(
+    headerContent,
+    {
+        opacity: "0%",
+        
+    },
+    {
+        opacity: "100%",
+        duration: 0.8,
+    },
+    ">",
+);
 
 
 
