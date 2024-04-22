@@ -4,114 +4,15 @@ import "./style.css";
 import Lenis from "@studio-freight/lenis";
 import { gsap } from "gsap";
 
-gsap.registerPlugin(ScrollTrigger, TextPlugin);
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
+
 import SplitType from "split-type";
 
-
-// const aboutLink = SplitType.create(".nav-link");
-// const aboutLinkChars = aboutLink.chars;
-
-// gsap.fromTo(
-//     aboutLinkChars,
-//     {
-//         y: -50,
-//     },
-//     {
-//         y: 0,
-//         opacity: 1,
-//         duration: 2,
-//         ease: "power4.out",
-//     }
-// );
-
-// Intro Section Animation
-let introTimeline = gsap.timeline();
-
-const projectLogo = document.querySelector(".project-logo");
-
-introTimeline.fromTo(
-    projectLogo,
-    {
-        opacity: 0,
-    },
-    {
-        opacity: 1,
-        duration: 0.8,
-        ease: "power1.inOut",
-    }
-);
-
-const promoviendoTitle = document.querySelector(".promoviendo-title");
-
-introTimeline.fromTo(
-    promoviendoTitle,
-    {
-        text: "",
-        opacity: 0,
-        width: "0rem",
-    },
-    {
-        text: "Promoviendo",
-        opacity: 1,
-        duration: 0.4,
-        width: "60rem",
-        ease: "power1.inOut",
-    },
-    ">",
-);
-
-const headerContent = document.querySelector(".header-content");
-
-introTimeline.fromTo(
-    headerContent,
-    {
-        opacity: "0%",
-        
-    },
-    {
-        opacity: "100%",
-        duration: 0.8,
-    },
-    ">",
-);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const scrollReminder = document.querySelector(".scroll-reminder", {
-    types: "chars",
-});
-
-gsap.to(scrollReminder, {
-    opacity: 0,
-    scrollTrigger: {
-        trigger: scrollReminder,
-        pin: true,
-        start: "top bottom-=100",
-        end: "+=100",
-        scrub: true,
-        // markers: true,
-    },
-});
-
-// Lenis scrolling
+// Lenis scrolling initialization
 const lenis = new Lenis();
-
 lenis.on("scroll", (e) => {
     console.log(e);
 });
@@ -122,3 +23,98 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+// Prevent scrolling until initial animations complete
+lenis.stop();
+
+// Intro Section Animation
+// Initial GSAP animation setup
+let introTimeline = gsap.timeline();
+
+const projectLogo = document.querySelector(".project-logo");
+const promoviendoTitle = document.querySelector(".promoviendo-title");
+const headerContent = document.querySelector(".header-content");
+const body = document.body;
+
+introTimeline
+    .fromTo(
+        projectLogo,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.8, ease: "power1.inOut" }
+    )
+    .fromTo(
+        promoviendoTitle,
+        { text: "", opacity: 0, width: "0rem" },
+        {
+            text: "Promoviendo",
+            opacity: 1,
+            duration: 0.4,
+            width: "60rem",
+            ease: "power1.inOut",
+        },
+        ">"
+    )
+    .fromTo(headerContent, { opacity: 0 },
+        { opacity: 1, duration: 0.4 })
+    .fromTo(
+        body,
+        { overflow: "hidden" },
+        {
+            overflow: "auto",
+            onComplete: () => {
+                lenis.start(); // Enable scrolling with Lenis after animations
+            },
+        },
+        ">-0.2" // This will start changing 0.2 seconds before the last animation completes
+    );
+
+// Lenis integrated nav links
+function handleNavClick(e) {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href");
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+        const offsetTop = targetSection.offsetTop; // Get the top position of the target section
+        const padding = 100; // Flat amount of padding on top in pixels
+        lenis.scrollTo(offsetTop - padding, 1000); // Scroll to the section with padding on top
+    }
+}
+
+const navLinks = document.querySelectorAll(".nav-link");
+navLinks.forEach((link) => {
+    link.addEventListener("click", handleNavClick);
+});
+
+const headerSection = document.querySelector("header");
+const introSection = document.querySelector(".intro-section");
+
+gsap.to(headerSection, {
+    scrollTrigger: {
+        trigger: introSection,
+        start: "top top",
+        end: "+=100",
+        scrub: true,
+        markers: true,
+    },
+    padding: "0.8rem",
+    backgroundColor: "#000000",
+    backgroundImage: "radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px",
+    backgroundSize: "4px 4px",
+});
+
+const scrollReminder = document.querySelector(".scroll-reminder", {
+    types: "chars",
+});
+
+// gsap.to(scrollReminder, {
+//     opacity: 0,
+//     scrollTrigger: {
+//         trigger: scrollReminder,
+//         pin: true,
+//         start: "top bottom-=100",
+//         end: "+=100",
+//         scrub: true,
+//         // markers: true,
+//     },
+// });
