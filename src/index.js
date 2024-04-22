@@ -24,8 +24,17 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
-// Prevent scrolling until initial animations complete
-lenis.stop();
+// ENABLE AFTER COMPLETION OF DEVELOPING
+// window.addEventListener("load", () => {
+//     // Scroll to the top with no delay
+//     lenis.scrollTo(0, {
+//         duration: 0,
+//         onComplete: () => {
+//             // Prevent scrolling until initial animations complete
+//             lenis.stop();
+//         },
+//     });
+// });
 
 // Intro Section Animation
 // Initial GSAP animation setup
@@ -54,8 +63,7 @@ introTimeline
         },
         ">"
     )
-    .fromTo(headerContent, { opacity: 0 },
-        { opacity: 1, duration: 0.4 })
+    .fromTo(headerContent, { opacity: 0 }, { opacity: 1, duration: 0.4 }, ">")
     .fromTo(
         body,
         { overflow: "hidden" },
@@ -65,7 +73,7 @@ introTimeline
                 lenis.start(); // Enable scrolling with Lenis after animations
             },
         },
-        ">-0.2" // This will start changing 0.2 seconds before the last animation completes
+        ">-0.4" // This will start changing 0.4 seconds before the last animation completes
     );
 
 // Lenis integrated nav links
@@ -95,11 +103,11 @@ gsap.to(headerSection, {
         start: "top top",
         end: "+=100",
         scrub: true,
-        markers: true,
     },
     padding: "0.8rem",
     backgroundColor: "#000000",
-    backgroundImage: "radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px",
+    backgroundImage:
+        "radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px",
     backgroundSize: "4px 4px",
 });
 

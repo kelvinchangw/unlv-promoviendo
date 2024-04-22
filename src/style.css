@@ -1,26 +1,24 @@
 @import url("./assets/fonts/roboto/stylesheet.css");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    color: black;
-
-    font-family: "Roboto", sans-serif;
-
-    -webkit-text-size-adjust: none;
-}
-
 :root {
     --scrollbar-width: 8px;
     --unlv-clr: #B10202;
 }
 
+/* Default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    -webkit-text-size-adjust: none;
+}
+
 html {
-    background-color: black;
     /* Base font size */
     font-size: 16px;
+    background-color: black;
 }
 
 body {
@@ -37,15 +35,10 @@ header {
     width: 100%;
 }
 
-.header-content {
-    width: 100%;
-    max-width: 1440px;
-    justify-content: space-between;
-    align-items: center;
-}
-
 main {
     width: 100%;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 a {
@@ -55,6 +48,24 @@ a {
 section {
     display: flex;
     padding: 2rem;
+}
+
+footer {
+    width: 100%;
+    height: 14rem;
+    padding: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 4px 4px;
+}
+
+.header-content {
+    width: 100%;
+    max-width: 1440px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .intro-section,
@@ -67,10 +78,6 @@ section {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-main.container {
-    flex-direction: column;
-    gap: 2rem;
-}
 .test-title {
     height: 6rem;
     font-size: 6rem;
@@ -244,21 +251,6 @@ main.container {
 .social-icon {
     width: 1.4rem;
     height: 1.4rem;
-}
-
-footer {
-    width: 100%;
-    height: 14rem;
-    padding: 2rem;
-    flex-direction: row;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    
-    background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-    background-size: 4px 4px;
-
-    bottom: 0;
 }
 
 .footer-information {
