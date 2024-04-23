@@ -76,7 +76,7 @@ introTimeline
         ">-0.4" // This will start changing 0.4 seconds before the last animation completes
     );
 
-// Lenis integrated nav links
+// Use Lenis for anchor links to maintain consistency
 function handleNavClick(e) {
     e.preventDefault();
     const targetId = e.currentTarget.getAttribute("href");
@@ -94,6 +94,7 @@ navLinks.forEach((link) => {
     link.addEventListener("click", handleNavClick);
 });
 
+// Header scrolling animation
 const headerSection = document.querySelector("header");
 const introSection = document.querySelector(".intro-section");
 
@@ -104,8 +105,8 @@ gsap.to(headerSection, {
         end: "+=100",
         scrub: true,
     },
-    padding: "0.8rem",
-    backgroundColor: "#000000",
+    padding: "1rem",
+    backgroundColor: "#1C1C1C",
     backgroundImage:
         "radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px",
     backgroundSize: "4px 4px",
