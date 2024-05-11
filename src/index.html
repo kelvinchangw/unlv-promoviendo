@@ -39,31 +39,85 @@
             </div>
         </header>
         <main class="container">
-            <!-- <div class="scroll-reminder">Scroll to explore</div> -->
-            <section class="intro-section">
+            <section class="intro-section container">
                 <img
                     src="./assets/imgs/promoviendo FINAL.png"
-                    alt="Project logo"
-                    class="project-logo"
+                    alt="Promoviendo logo"
+                    class="promoviendo-logo"
                 />
                 <div class="promoviendo-title"></div>
             </section>
-            <section class="about-section" id="about">
-                <img
-                    src="./assets/imgs/promoviendo FINAL.png"
-                    alt="Project logo"
-                    class="project-logo"
-                />
-                <div class="about-section-information">
-                    <span class="about-section-information-text"
-                        >Empowering Equitable Learning: Bridging the Gap in
-                        Computer Science Education for Latinx Students</span
-                    >
+            <section class="about-section container" id="about">
+                <div class="about-title-container container">
+                    <span class="about-title section-title">Who are we?</span>
+                    <span class="about-slogan">
+                        Promoviendo is Advancing Equitable Teaching in Computer
+                        Science for Latinx Students
+                    </span>
+                </div>
+                <div class="about-description container">
+                    <p>
+                        Our initiative focuses on enhancing STEM education at
+                        the undergraduate level, particularly in computer
+                        science (CS), to support the academic success of Latinx
+                        students. We aim to:
+                    </p>
+                    <div class="about-cards container">
+                        <div class="about-card container">
+                            <p>
+                                Provide comprehensive development programs for
+                                CS instructors to enhance their ability to
+                                support Latinx students academically, socially,
+                                and emotionally.
+                            </p>
+                        </div>
+                        <div class="about-card container">
+                            <p>
+                                Increase graduation and retention rates of
+                                Latinx CS majors by implementing activities that
+                                cultivate co-curricular relationships and
+                                promote a sense of belonging and well-being.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-description container">
+                    <p>
+                        At UNLV, Latinx students represent about 20-27% of the
+                        incoming first-year CS cohort, with many being
+                        first-generation college students facing unique
+                        challenges. Given the growing enrollment of Latinx
+                        students, it is crucial to improve their educational
+                        outcomes.
+                    </p>
+                    <p>
+                        Our project will employ Transparency in Learning and
+                        Teaching (TILT) techniques, rooted in critical
+                        multicultural education and supported by Open
+                        Educational Resources (OER). These techniques, which
+                        clarify the 'how' and 'why' behind course interactions,
+                        have proven effective in boosting student performance,
+                        especially among first-generation students in non-STEM
+                        fields.
+                    </p>
+                    <p>
+                        A specific focus will be on enhancing transparency in
+                        early CS courses, where hands-on programming assignments
+                        are vital. By refining these assignments, we aim to
+                        reduce faculty workload and improve student learning
+                        outcomes, thereby addressing systemic inequities in
+                        higher education.
+                    </p>
                 </div>
             </section>
-            <section class="funding-section">
+            <section class="funding-section container">
+                <div class="funding-title-container">
+                    <span class="funding-title section-title"
+                        >NSF Funded Project FAIN 2318422</span
+                    >
+                </div>
                 <div class="funding-cards-container container">
-                    <div class="unlv-card funding-card">
+                    <div class="unlv-card funding-card container">
                         <div class="funding-card-img-container container">
                             <img
                                 src="./assets/imgs/UNLV-Red.png"
@@ -77,7 +131,7 @@
                             <p>Computer Science and College of Education</p>
                         </div>
                     </div>
-                    <div class="nsf-card funding-card">
+                    <div class="nsf-card funding-card container">
                         <div class="funding-card-img-container container">
                             <img
                                 src="./assets/imgs/NSF_Official.png"
@@ -93,197 +147,269 @@
                     </div>
                 </div>
             </section>
-            <section class="team-section" id="team">
-                <h2 class="team-section-title">Get to know our team</h2>
+            <section class="team-section container" id="team">
+                <div class="team-title-container container">
+                    <span class="team-title section-title">Meet our team!</span>
+                </div>
                 <div class="team-cards-container">
                     <div class="team-cards">
-                        <div id="taghva" class="team-card">
-                            <img
-                                src="./assets/imgs/team-photos/taghva.jpg"
-                                alt=""
-                                class="team-member-photo"
-                            />
-                            <div class="team-member-info">
-                                <div class="team-member-titles">
+                        <div id="taghva" class="team-card container">
+                            <div class="team-member-photo-container container">
+                                <img
+                                    src="./assets/imgs/team-photos/taghva.jpg"
+                                    alt=""
+                                    class="team-member-photo"
+                                />
+                            </div>
+                            <div class="team-member-info container">
+                                <div
+                                    class="team-member-title-container container"
+                                >
                                     <span class="team-member-name"
                                         >Kazem Taghva</span
                                     >
-                                    <span class="team-member-role"
-                                        >Principal Investigator</span
-                                    >
+                                    <div class="team-member-social-links">
+                                        <a
+                                            class="social-icon-link"
+                                            href="https://www.linkedin.com/in/kelvinchangw"
+                                            target="_blank"
+                                        >
+                                            <svg
+                                                class="social-icon"
+                                                viewBox="0 0 128 128"
+                                            >
+                                                <path
+                                                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="team-member-social-links">
-                                    <svg
-                                        class="social-icon"
-                                        viewBox="0 0 128 128"
-                                    >
-                                        <path
-                                            d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
-                                        ></path>
-                                    </svg>
-                                </div>
+                                <span class="team-member-role"
+                                    >Principal Investigator</span
+                                > 
                             </div>
                         </div>
-                        <div id="fonseca" class="team-card">
-                            <img
-                                src="./assets/imgs/team-photos/fonseca.jpg"
-                                alt=""
-                                class="team-member-photo"
-                            />
-                            <div class="team-member-info">
-                                <div class="team-member-titles">
+                        <div id="fonseca" class="team-card container">
+                            <div class="team-member-photo-container container">
+                                <img
+                                    src="./assets/imgs/team-photos/fonseca.jpg"
+                                    alt=""
+                                    class="team-member-photo"
+                                />
+                            </div>
+                            <div class="team-member-info container">
+                                <div
+                                    class="team-member-title-container container"
+                                >
                                     <span class="team-member-name"
                                         >Jorge Fonseca</span
                                     >
-                                    <span class="team-member-role"
-                                        >Co-Principal Investigator</span
-                                    >
+                                    <div class="team-member-social-links">
+                                        <a
+                                            class="social-icon-link"
+                                            href="https://www.linkedin.com/in/kelvinchangw"
+                                            target="_blank"
+                                        >
+                                            <svg
+                                                class="social-icon"
+                                                viewBox="0 0 128 128"
+                                            >
+                                                <path
+                                                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="team-member-social-links">
-                                    <svg
-                                        class="social-icon"
-                                        viewBox="0 0 128 128"
-                                    >
-                                        <path
-                                            d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
-                                        ></path>
-                                    </svg>
-                                </div>
+                                <span class="team-member-role"
+                                    >Co-Principial Investigator
+                                </span>
                             </div>
                         </div>
-                        <div id="goins" class="team-card">
-                            <img
-                                src="./assets/imgs/team-photos/goins.jpg"
-                                alt=""
-                                class="team-member-photo"
-                            />
-                            <div class="team-member-info">
-                                <div class="team-member-titles">
+                        <div id="goins" class="team-card container">
+                            <div class="team-member-photo-container container">
+                                <img
+                                    src="./assets/imgs/team-photos/goins.jpg"
+                                    alt=""
+                                    class="team-member-photo"
+                                />
+                            </div>
+                            <div class="team-member-info container">
+                                <div
+                                    class="team-member-title-container container"
+                                >
                                     <span class="team-member-name"
                                         >Marla R. Goins</span
                                     >
-                                    <span class="team-member-role"
-                                        >Co-Principal Investigator</span
-                                    >
+                                    <div class="team-member-social-links">
+                                        <a
+                                            class="social-icon-link"
+                                            href="https://www.linkedin.com/in/kelvinchangw"
+                                            target="_blank"
+                                        >
+                                            <svg
+                                                class="social-icon"
+                                                viewBox="0 0 128 128"
+                                            >
+                                                <path
+                                                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="team-member-social-links">
-                                    <svg
-                                        class="social-icon"
-                                        viewBox="0 0 128 128"
-                                    >
-                                        <path
-                                            d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
-                                        ></path>
-                                    </svg>
-                                </div>
+                                <span class="team-member-role"
+                                    >Co-Principial Investigator
+                                </span>
                             </div>
                         </div>
-                        <div id="clark" class="team-card">
-                            <img
-                                src="./assets/imgs/team-photos/clark.jpg"
-                                alt=""
-                                class="team-member-photo"
-                            />
-                            <div class="team-member-info">
-                                <div class="team-member-titles">
+                        <div id="clark" class="team-card container">
+                            <div class="team-member-photo-container container">
+                                <img
+                                    src="./assets/imgs/team-photos/clark.jpg"
+                                    alt=""
+                                    class="team-member-photo"
+                                />
+                            </div>
+                            <div class="team-member-info container">
+                                <div
+                                    class="team-member-title-container container"
+                                >
                                     <span class="team-member-name"
                                         >Christine Clark</span
                                     >
-                                    <span class="team-member-role"
-                                        >Co-Principal Investigator</span
-                                    >
+                                    <div class="team-member-social-links">
+                                        <a
+                                            class="social-icon-link"
+                                            href="https://www.linkedin.com/in/kelvinchangw"
+                                            target="_blank"
+                                        >
+                                            <svg
+                                                class="social-icon"
+                                                viewBox="0 0 128 128"
+                                            >
+                                                <path
+                                                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="team-member-social-links">
-                                    <svg
-                                        class="social-icon"
-                                        viewBox="0 0 128 128"
-                                    >
-                                        <path
-                                            d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
-                                        ></path>
-                                    </svg>
-                                </div>
+                                <span class="team-member-role"
+                                    >Co-Principial Investigator
+                                </span>
                             </div>
                         </div>
-                        <div id="cisneros" class="team-card">
-                            <img
-                                src="./assets/imgs/team-photos/cisneros.jpg"
-                                alt=""
-                                class="team-member-photo"
-                            />
-                            <div class="team-member-info">
-                                <div class="team-member-titles">
+                        <div id="cisneros" class="team-card container">
+                            <div class="team-member-photo-container container">
+                                <img
+                                    src="./assets/imgs/team-photos/cisneros.jpg"
+                                    alt=""
+                                    class="team-member-photo"
+                                />
+                            </div>
+                            <div class="team-member-info container">
+                                <div
+                                    class="team-member-title-container container"
+                                >
                                     <span class="team-member-name"
                                         >Ben Cisneros</span
                                     >
-                                    <span class="team-member-role"
-                                        >Co-Principal Investigator</span
-                                    >
+                                    <div class="team-member-social-links">
+                                        <a
+                                            class="social-icon-link"
+                                            href="https://www.linkedin.com/in/kelvinchangw"
+                                            target="_blank"
+                                        >
+                                            <svg
+                                                class="social-icon"
+                                                viewBox="0 0 128 128"
+                                            >
+                                                <path
+                                                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="team-member-social-links">
-                                    <svg
-                                        class="social-icon"
-                                        viewBox="0 0 128 128"
-                                    >
-                                        <path
-                                            d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
-                                        ></path>
-                                    </svg>
-                                </div>
+                                <span class="team-member-role"
+                                    >Co-Principial Investigator
+                                </span>
                             </div>
                         </div>
-                        <div id="jorgensen" class="team-card">
-                            <img
-                                src="./assets/imgs/team-photos/jorgensen.jpg"
-                                alt=""
-                                class="team-member-photo"
-                            />
-                            <div class="team-member-info">
-                                <div class="team-member-titles">
+                        <div id="jorgensen" class="team-card container">
+                            <div class="team-member-photo-container container">
+                                <img
+                                    src="./assets/imgs/team-photos/jorgensen.jpg"
+                                    alt=""
+                                    class="team-member-photo"
+                                />
+                            </div>
+                            <div class="team-member-info container">
+                                <div
+                                    class="team-member-title-container container"
+                                >
                                     <span class="team-member-name"
                                         >Ed Jorgensen</span
                                     >
-                                    <span class="team-member-role"
-                                        >Senior Personnel</span
-                                    >
+                                    <div class="team-member-social-links">
+                                        <a
+                                            class="social-icon-link"
+                                            href="https://www.linkedin.com/in/kelvinchangw"
+                                            target="_blank"
+                                        >
+                                            <svg
+                                                class="social-icon"
+                                                viewBox="0 0 128 128"
+                                            >
+                                                <path
+                                                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="team-member-social-links">
-                                    <svg
-                                        class="social-icon"
-                                        viewBox="0 0 128 128"
-                                    >
-                                        <path
-                                            d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
-                                        ></path>
-                                    </svg>
-                                </div>
+                                <span class="team-member-role"
+                                    >Senior Personnel
+                                </span>
                             </div>
                         </div>
-                        <div id="chang" class="team-card">
-                            <img
-                                src="./assets/imgs/team-photos/chang.PNG"
-                                alt=""
-                                class="team-member-photo"
-                            />
-                            <div class="team-member-info">
-                                <div class="team-member-titles">
+                        <div id="chang" class="team-card container">
+                            <div class="team-member-photo-container container">
+                                <img
+                                    src="./assets/imgs/team-photos/chang.PNG"
+                                    alt=""
+                                    class="team-member-photo"
+                                />
+                            </div>
+                            <div class="team-member-info container">
+                                <div
+                                    class="team-member-title-container container"
+                                >
                                     <span class="team-member-name"
                                         >Kelvin Chang</span
                                     >
-                                    <span class="team-member-role"
-                                        >Full-Stack Engineer</span
-                                    >
+                                    <div class="team-member-social-links">
+                                        <a
+                                            class="social-icon-link"
+                                            href="https://www.linkedin.com/in/kelvinchangw"
+                                            target="_blank"
+                                        >
+                                            <svg
+                                                class="social-icon"
+                                                viewBox="0 0 128 128"
+                                            >
+                                                <path
+                                                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
+                                                ></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="team-member-social-links">
-                                    <svg
-                                        class="social-icon"
-                                        viewBox="0 0 128 128"
-                                    >
-                                        <path
-                                            d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
-                                        ></path>
-                                    </svg>
-                                </div>
+                                <span class="team-member-role"
+                                    >Full-Stack Software Engineer</span
+                                >
                             </div>
                         </div>
                     </div>
