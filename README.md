@@ -1,3 +1,11 @@
+<h1 align="center">
+Promoviendo - v1.0.0
+</h1>
+
+<img src="./src/assets/imgs/promoviendo-landing.png">
+
+<br>
+
 ## 🛠️ Set-Up for Development
 
 1. Install dependencies
