@@ -21,16 +21,16 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 // WINDOW LOAD EVENT
-window.addEventListener("load", () => {
-    // Scroll to the top at the beginning
-    lenis.scrollTo(0, {
-        duration: 0.001,
-        onComplete: () => {
-            // Prevent scrolling until initial animations are complete
-            lenis.stop();
-        },
-    });
-});
+// window.addEventListener("load", () => {
+//     // Scroll to the top at the beginning
+//     lenis.scrollTo(0, {
+//         duration: 0.001,
+//         onComplete: () => {
+//             // Prevent scrolling until initial animations are complete
+//             lenis.stop();
+//         },
+//     });
+// });
 
 // ELEMENT SELECTION
 const projectLogo = document.querySelector(".project-logo");
@@ -38,6 +38,11 @@ const promoviendoTitle = document.querySelector(".promoviendo-title");
 const headerContent = document.querySelector(".header-content");
 const body = document.body;
 const aboutSection = document.querySelector(".about-section");
+
+// Function to determine width based on screen size
+function getTitleWidth() {
+    return window.innerWidth <= 600 ? "12rem" : "60rem";
+}
 
 // GSAP TIMELINE FOR INTRO ANIMATION
 let introTimeline = gsap.timeline();
@@ -48,7 +53,7 @@ introTimeline
         text: "Promoviendo",
         opacity: 1,
         duration: 0.4,
-        width: "60rem",
+        width: getTitleWidth(),
         ease: "power1.inOut",
     }, ">")
     .fromTo(headerContent, { opacity: 0 }, { opacity: 1, duration: 0.4 }, ">")
@@ -93,5 +98,36 @@ gsap.to(headerSection, {
     backgroundColor: "#0a0a0a",
     backgroundImage: "radial-gradient(rgba(204, 204, 204, 0.15) 1px, transparent 1px)",
     backgroundSize: "4px 4px",
-    boxShadow: "0 0 16px 0px #EFEFEF",
+    boxShadow: "0 0px 16px -6px #EFEFEF",
+});
+
+// COLLAPSIBLE PHASE SECTIONS
+const phaseHeaders = document.querySelectorAll(".phase-header");
+
+phaseHeaders.forEach(header => {
+    header.addEventListener("click", (e) => {
+        const parent = header.parentElement;
+        if (parent.classList.contains("disabled")) {
+            e.preventDefault();
+            return;
+        }
+        const content = header.nextElementSibling;
+        const subContent = content.querySelectorAll('.inner-content');
+        const chevron = header.querySelector(".chevron");
+
+        if (gsap.getProperty(content, "display") === "none" || gsap.getProperty(content, "height") === 0) {
+            // Expand
+            gsap.set(content, { display: "flex" });
+            gsap.fromTo(content, { height: 0 }, { minHeight: "fit-content", maxHeight: "24rem", height: "18rem", marginTop: "4rem", duration: 0.3, ease: "power1.inOut" });
+            gsap.fromTo(subContent, { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.1, ease: "power1.inOut" }, "-=0.2");
+            gsap.to(chevron, { rotate: 90, duration: 0.3, ease: "power1.inOut" });
+        } else {
+            // Collapse
+            gsap.to(subContent, { opacity: 0, duration: 0.2, ease: "power1.inOut" });
+            gsap.to(content, { height: 0, marginTop: "0rem", duration: 0.3, ease: "power1.inOut", onComplete: () => {
+                gsap.set(content, { display: "none" });
+            }});
+            gsap.to(chevron, { rotate: 0, duration: 0.3, ease: "power1.inOut" });
+        }
+    });
 });
